@@ -27,3 +27,10 @@
      font-family: 'Proxima Nova Xbold';
      src: url(../fonts/ProximaNova-Xbold.otf);
  }
+
+body {
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility:    hidden;
+  -ms-backface-visibility:     hidden;
+}

@@ -1,27 +1,124 @@
 @import 'fonts';
-@import 'video';
 body {
     margin: 0;
     padding: 0;
     font-family: 'Proxima Nova', Georgia, sans-serif;
 }
 
+h2 {
+    text-transform: uppercase;
+    font: 36px 'Proxima Nova Bold';
+    color: #727272;
+    margin: 0;
+}
+.wrap{
+    width: 940px;
+    margin: 0 auto;
+}
+
+.button {
+    border-radius: 3px;
+    background-color: #4c75a3;
+    box-shadow: inset 0px -3px 0px 0px rgba(0, 0, 0, 0.49);
+    width: 298px;
+    height: 60px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+    font-family: 'Proxima Nova';
+    line-height: 60px;
+    text-transform: none;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    &:hover {
+        background: lighten(#4c75a3, 5%);
+        box-shadow: 0px 10px 13px 0px rgba(0, 0, 0, 0.35), inset 0px -3px 0px 0px rgba(0, 0, 0, 0.49);
+    }
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 #home {
     width: 100%;
     height: 100vh;
-    background: url(../img/geometry.png) center no-repeat;
+    background: rgba(0, 0, 0, 0.7) url(../img/geometry.png) center no-repeat;
     position: relative;
+    overflow: hidden;
     .head {
         color: white;
         text-transform: uppercase;
         font: 45pt 'Proxima Nova Thin';
         letter-spacing: 0.12em;
         text-align: center;
+    }
+    span {
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
         margin-top: -25px;
     }
-    span {}
+    .button {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 110px;
+    }
+    .scroll-go {
+        background: url(../img/scroll.png) center no-repeat;
+        width: 30px;
+        height: 59px;
+        position: absolute;
+        left: 50%;
+        margin-left: -15px;
+        top: 100%;
+        margin-top: -79px;
+        animation: scroll-go 2s infinite ease-in-out;
+    }
+    iframe {
+        position: absolute;
+        min-height: 100%;
+        min-width: 100%;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -100;
+    }
+    @media (min-aspect-ratio: 16/9) {
+        iframe {
+            height: 300%;
+            top: -100%;
+        }
+    }
+    @media (max-aspect-ratio: 16/9) {
+        iframe {
+            width: 300%;
+            left: -100%;
+        }
+    }
 }
+
+#about {
+    padding-top: 100px;
+    background: #fff;
+    color: #727272;
+    .about-left, .about-right{
+        display: inline-block;
+        vertical-align: top;
+    }
+    p{
+        font: 16px/25px 'Proxima Nova Thin';
+        width: 536px;
+        margin: 0;
+    }
+    .about-right{
+        background: url(../img/girl.png) center no-repeat;
+        width: 374px;
+        height: 409px;
+    }
+}
+
