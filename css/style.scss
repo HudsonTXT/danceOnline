@@ -12,6 +12,11 @@ h2 {
     margin: 0;
     margin-bottom: 34px;
 }
+h2 span{
+    font: 12px 'Proxima Nova Thin';
+    vertical-align: middle;
+    text-transform: lowercase;
+}
 
 .wrap {
     width: 940px;
@@ -122,5 +127,10 @@ h2 {
         background: url(../img/girl.png) center no-repeat;
         width: 374px;
         height: 409px;
+        float: right;
     }
+}
+
+#music{
+    margin-top: 112px;
 }
