@@ -1,22 +1,22 @@
  @font-face {
-    font-family: 'Proxima Nova'; /* Имя шрифта */
-    src: url(fonts/ProximaNova-Reg.otf); /* Путь к файлу со шрифтом */
+    font-family: 'Proxima Nova';
+    src: url(fonts/ProximaNova-Reg.otf);
    }
  @font-face {
-    font-family: 'Proxima Nova Black'; /* Имя шрифта */
-    src: url(fonts/ProximaNova-Black.otf); /* Путь к файлу со шрифтом */
+    font-family: 'Proxima Nova Black';
+    src: url(fonts/ProximaNova-Black.otf);
    }
  @font-face {
-    font-family: 'Proxima Nova Bold'; /* Имя шрифта */
-    src: url(fonts/ProximaNova-Bold.otf); /* Путь к файлу со шрифтом */
+    font-family: 'Proxima Nova Bold';
+    src: url(fonts/ProximaNova-Bold.otf);
    }
  @font-face {
-    font-family: 'Proxima Nova Light'; /* Имя шрифта */
-    src: url(fonts/ProximaNova-Light.otf); /* Путь к файлу со шрифтом */
+    font-family: 'Proxima Nova Light';
+    src: url(fonts/ProximaNova-Light.otf);
    }
  @font-face {
-    font-family: 'Proxima Nova Xbold'; /* Имя шрифта */
-    src: url(fonts/ProximaNova-Xbold.otf); /* Путь к файлу со шрифтом */
+    font-family: 'Proxima Nova Xbold';
+    src: url(fonts/ProximaNova-Xbold.otf);
    }
 body{
     margin: 0;
@@ -30,6 +30,40 @@ body{
     background: #000;
     .head{
         color: white;
+    }
+    .video-bg {
+        background: #000;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -99;
+    }
+
+    .video-fg,
+    .video-bg iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        opacity: 0.6;
+    }
+
+    @media (min-aspect-ratio: 16/9) {
+        .video-fg {
+            height: 300%;
+            top: -100%;
+        }
+    }
+
+    @media (max-aspect-ratio: 16/9) {
+        .video-bg {
+            width: 300%;
+            left: -100%;
+        }
     }
 }
 

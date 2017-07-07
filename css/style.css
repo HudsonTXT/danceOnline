@@ -1,29 +1,18 @@
-@charset "UTF-8";
 @font-face {
   font-family: 'Proxima Nova';
-  /* ╨Ш╨╝╤П ╤И╤А╨╕╤Д╤В╨░ */
-  src: url(fonts/ProximaNova-Reg.otf);
-  /* ╨Я╤Г╤В╤М ╨║ ╤Д╨░╨╣╨╗╤Г ╤Б╨╛ ╤И╤А╨╕╤Д╤В╨╛╨╝ */ }
+  src: url(fonts/ProximaNova-Reg.otf); }
 @font-face {
   font-family: 'Proxima Nova Black';
-  /* ╨Ш╨╝╤П ╤И╤А╨╕╤Д╤В╨░ */
-  src: url(fonts/ProximaNova-Black.otf);
-  /* ╨Я╤Г╤В╤М ╨║ ╤Д╨░╨╣╨╗╤Г ╤Б╨╛ ╤И╤А╨╕╤Д╤В╨╛╨╝ */ }
+  src: url(fonts/ProximaNova-Black.otf); }
 @font-face {
   font-family: 'Proxima Nova Bold';
-  /* ╨Ш╨╝╤П ╤И╤А╨╕╤Д╤В╨░ */
-  src: url(fonts/ProximaNova-Bold.otf);
-  /* ╨Я╤Г╤В╤М ╨║ ╤Д╨░╨╣╨╗╤Г ╤Б╨╛ ╤И╤А╨╕╤Д╤В╨╛╨╝ */ }
+  src: url(fonts/ProximaNova-Bold.otf); }
 @font-face {
   font-family: 'Proxima Nova Light';
-  /* ╨Ш╨╝╤П ╤И╤А╨╕╤Д╤В╨░ */
-  src: url(fonts/ProximaNova-Light.otf);
-  /* ╨Я╤Г╤В╤М ╨║ ╤Д╨░╨╣╨╗╤Г ╤Б╨╛ ╤И╤А╨╕╤Д╤В╨╛╨╝ */ }
+  src: url(fonts/ProximaNova-Light.otf); }
 @font-face {
   font-family: 'Proxima Nova Xbold';
-  /* ╨Ш╨╝╤П ╤И╤А╨╕╤Д╤В╨░ */
-  src: url(fonts/ProximaNova-Xbold.otf);
-  /* ╨Я╤Г╤В╤М ╨║ ╤Д╨░╨╣╨╗╤Г ╤Б╨╛ ╤И╤А╨╕╤Д╤В╨╛╨╝ */ }
+  src: url(fonts/ProximaNova-Xbold.otf); }
 body {
   margin: 0;
   padding: 0;
@@ -35,5 +24,30 @@ body {
   background: #000; }
   #home .head {
     color: white; }
+  #home .video-bg {
+    background: #000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -99; }
+  #home .video-fg,
+  #home .video-bg iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.6; }
+  @media (min-aspect-ratio: 16 / 9) {
+    #home .video-fg {
+      height: 300%;
+      top: -100%; } }
+  @media (max-aspect-ratio: 16 / 9) {
+    #home .video-bg {
+      width: 300%;
+      left: -100%; } }
 
 /*# sourceMappingURL=style.css.map */
