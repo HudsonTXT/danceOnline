@@ -1,3 +1,23 @@
+ @font-face {
+    font-family: 'Proxima Nova'; /* Имя шрифта */
+    src: url(fonts/ProximaNova-Reg.otf); /* Путь к файлу со шрифтом */
+   }
+ @font-face {
+    font-family: 'Proxima Nova Black'; /* Имя шрифта */
+    src: url(fonts/ProximaNova-Black.otf); /* Путь к файлу со шрифтом */
+   }
+ @font-face {
+    font-family: 'Proxima Nova Bold'; /* Имя шрифта */
+    src: url(fonts/ProximaNova-Bold.otf); /* Путь к файлу со шрифтом */
+   }
+ @font-face {
+    font-family: 'Proxima Nova Light'; /* Имя шрифта */
+    src: url(fonts/ProximaNova-Light.otf); /* Путь к файлу со шрифтом */
+   }
+ @font-face {
+    font-family: 'Proxima Nova Xbold'; /* Имя шрифта */
+    src: url(fonts/ProximaNova-Xbold.otf); /* Путь к файлу со шрифтом */
+   }
 body{
     margin: 0;
     padding: 0;
