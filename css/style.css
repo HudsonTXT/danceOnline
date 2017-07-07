@@ -113,10 +113,11 @@ h2 {
       left: -100%; } }
 
 #about {
-  padding-top: 100px;
+  margin-top: 112px;
   background: #fff;
   color: #727272; }
-  #about .about-left, #about .about-right {
+  #about .about-left,
+  #about .about-right {
     display: inline-block;
     vertical-align: top; }
   #about p {

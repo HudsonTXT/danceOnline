@@ -12,7 +12,8 @@ h2 {
     margin: 0;
     margin-bottom: 34px;
 }
-.wrap{
+
+.wrap {
     width: 940px;
     margin: 0 auto;
 }
@@ -104,22 +105,22 @@ h2 {
 }
 
 #about {
-    padding-top: 100px;
+    margin-top: 112px;
     background: #fff;
     color: #727272;
-    .about-left, .about-right{
+    .about-left,
+    .about-right {
         display: inline-block;
         vertical-align: top;
     }
-    p{
+    p {
         font: 16px/25px 'Proxima Nova Thin';
         width: 536px;
         margin: 0;
     }
-    .about-right{
+    .about-right {
         background: url(../img/girl.png) center no-repeat;
         width: 374px;
         height: 409px;
     }
 }
-
