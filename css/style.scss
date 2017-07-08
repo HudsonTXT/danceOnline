@@ -320,10 +320,51 @@ h2 span {
 }
 
 #howtostart {
+    color: #727272;
     margin-top: 91px;
 
     .button{
         margin: 0 auto;
+        margin-top: 34px;
+    }
+
+    .steps{
+        text-align: center;
+    }
+    .s-column{
+        text-align: left;
+        width: 228px;
+        display: inline-block;
+        vertical-align: top;
+
+        &:nth-child(2){
+            margin: 0 123px;
+        }
+    }
+    .s-num{
+        text-align: center;
+        width: 33px;
+        padding: 5px 0;
+        border-radius: 100%;
+        border: 1px solid #727272;
+        line-height: 33px;
+        font: 18px 'Proxima Nova Light';
+        display: inline-block;
+        vertical-align: top;
+    }
+    .s-head{
+        margin-left: 15px;
+        text-transform: uppercase;
+        font-size: 24px;
+        color: #727272;
+        display: inline-block;
+        vertical-align: top;
+        line-height: 35px;
+    }
+    .s-desc{
+        font-size: 14px;
+        color: #727272;
+        margin-top: 28px;
     }
 }
 
