@@ -180,11 +180,13 @@ h2 span {
       animation: fadeOutUp .2s; }
       #music .m-block .song-info span {
         display: block; }
-    #music .m-block:hover img {
-      opacity: 0.8; }
-    #music .m-block:hover .song-info {
-      opacity: 1;
-      animation: fadeInDown .2s; }
+    #music .m-block:hover {
+      box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.35); }
+      #music .m-block:hover img {
+        opacity: 0.8; }
+      #music .m-block:hover .song-info {
+        opacity: 1;
+        animation: fadeInDown .2s; }
     #music .m-block .song-info .author {
       font: 18px 'Proxima Nova Bold'; }
     #music .m-block .song-info .song {
@@ -205,8 +207,10 @@ h2 span {
         #music .m-block.active .song-info .song {
           font: 24px 'Proxima Nova';
           margin-top: -7px; }
-      #music .m-block.active:hover .song-info {
-        animation: none; }
+      #music .m-block.active:hover {
+        box-shadow: 2px 13px 50px 0px rgba(0, 0, 0, 0.35); }
+        #music .m-block.active:hover .song-info {
+          animation: none; }
   #music .m-pagination {
     margin-top: 34px;
     width: 100%;
@@ -230,5 +234,92 @@ h2 span {
       border-color: #a5a5a5; }
     #music .m-pag.active {
       background: #727272; }
+
+#features {
+  background: url(../img/bg-f.png) top center no-repeat;
+  width: 100%;
+  height: 910px;
+  margin-top: -188px;
+  box-sizing: border-box;
+  padding-top: 321px; }
+  #features h2 {
+    color: #333333;
+    margin-bottom: 84px; }
+  #features .f-slider {
+    width: 485px;
+    text-align: center;
+    color: #333333;
+    position: relative; }
+  #features .f-img {
+    width: 186px;
+    height: 186px;
+    margin: 0 auto;
+    border: 5px solid #333;
+    position: relative; }
+    #features .f-img img {
+      display: block;
+      margin: auto;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0; }
+  #features .f-text {
+    width: 224px;
+    margin: 0 auto;
+    margin-top: 10px; }
+    #features .f-text .f-head {
+      font: 30px/27px 'Proxima Nova Bold';
+      text-transform: uppercase;
+      letter-spacing: 0.02em; }
+    #features .f-text .f-desc {
+      font: 14px/22px 'Proxima Nova Thin';
+      letter-spacing: 0.02em; }
+  #features .f-pag {
+    width: 323px;
+    position: absolute;
+    left: 50%;
+    margin-left: -161.5px;
+    top: 68.25px; }
+  #features .f-right {
+    background: url(../img/right.png) center no-repeat;
+    width: 17px;
+    height: 41px;
+    float: right;
+    cursor: pointer; }
+  #features .f-left {
+    background: url(../img/left.png) center no-repeat;
+    width: 17px;
+    height: 41px;
+    float: left;
+    cursor: pointer; }
+
+#howtostart {
+  margin-top: 91px; }
+  #howtostart .button {
+    margin: 0 auto; }
+
+#footer {
+  background: url(../img/footer.png) top center no-repeat;
+  width: 100%;
+  height: 369px;
+  padding-top: 110px;
+  box-sizing: border-box;
+  text-align: center; }
+  #footer .f-column {
+    width: 293px;
+    height: 210px;
+    display: inline-block;
+    vertical-align: top;
+    color: #fff;
+    font-size: 16px;
+    line-height: 27px;
+    text-align: left; }
+    #footer .f-column a {
+      display: block;
+      color: inherit;
+      text-decoration: none; }
+    #footer .f-column:nth-child(2) {
+      margin: 0 25px; }
 
 /*# sourceMappingURL=style.css.map */
