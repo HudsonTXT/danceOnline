@@ -306,9 +306,26 @@ h2 span {
     text-align: left;
     width: 228px;
     display: inline-block;
-    vertical-align: top; }
+    vertical-align: top;
+    position: relative; }
     #howtostart .s-column:nth-child(2) {
       margin: 0 123px; }
+      #howtostart .s-column:nth-child(2):before {
+        content: ' ';
+        position: absolute;
+        width: 50%;
+        height: 1px;
+        background: rgba(114, 114, 114, 0.33);
+        top: 17px;
+        left: -121px; }
+      #howtostart .s-column:nth-child(2):after {
+        content: ' ';
+        position: absolute;
+        width: 59%;
+        height: 1px;
+        background: rgba(114, 114, 114, 0.33);
+        top: 17px;
+        right: -121px; }
   #howtostart .s-num {
     text-align: center;
     width: 33px;
