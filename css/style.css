@@ -25,7 +25,8 @@ body {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Proxima Nova', Georgia, sans-serif; }
+  font-family: 'Proxima Nova', Georgia, sans-serif;
+  overflow-x: hidden; }
 
 h2 {
   text-transform: uppercase;
@@ -57,7 +58,10 @@ h2 span {
   line-height: 60px;
   text-transform: none;
   cursor: pointer;
-  transition: all .5s ease-in-out;
+  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -77,7 +81,11 @@ h2 span {
     text-transform: uppercase;
     font: 45pt 'Proxima Nova Thin';
     letter-spacing: 0.12em;
-    text-align: center; }
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
   #home span {
     position: absolute;
     left: 50%;
@@ -137,5 +145,90 @@ h2 span {
 
 #music {
   margin-top: 112px; }
+  #music .m-block {
+    width: 242px;
+    height: 217px;
+    display: inline-block;
+    vertical-align: middle;
+    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.35);
+    position: relative;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    background: #000;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+    #music .m-block img {
+      width: inherit;
+      height: inherit;
+      opacity: 1; }
+    #music .m-block .song-info {
+      opacity: 0;
+      position: absolute;
+      color: #fff;
+      text-transform: uppercase;
+      bottom: 10px;
+      left: 10px;
+      transition: all .2s ease-in-out;
+      -webkit-transition: all .2s ease-in-out;
+      -moz-transition: all .2s ease-in-out;
+      -ms-transition: all .2s ease-in-out;
+      animation: fadeOutUp .2s; }
+      #music .m-block .song-info span {
+        display: block; }
+    #music .m-block:hover img {
+      opacity: 0.8; }
+    #music .m-block:hover .song-info {
+      opacity: 1;
+      animation: fadeInDown .2s; }
+    #music .m-block .song-info .author {
+      font: 18px 'Proxima Nova Bold'; }
+    #music .m-block .song-info .song {
+      font: 16px 'Proxima Nova';
+      margin-top: -5px; }
+    #music .m-block.active {
+      width: 374px;
+      height: 335px;
+      box-shadow: 2px 13px 25px 0px rgba(0, 0, 0, 0.35);
+      margin: 0 36px; }
+      #music .m-block.active img {
+        opacity: 0.9; }
+      #music .m-block.active .song-info {
+        opacity: 1;
+        animation: none; }
+        #music .m-block.active .song-info .author {
+          font: 30px 'Proxima Nova Bold'; }
+        #music .m-block.active .song-info .song {
+          font: 24px 'Proxima Nova';
+          margin-top: -7px; }
+      #music .m-block.active:hover .song-info {
+        animation: none; }
+  #music .m-pagination {
+    margin-top: 34px;
+    width: 100%;
+    text-align: center; }
+  #music .m-pag {
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    border: 1px solid #727272;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out; }
+    #music .m-pag:nth-child(2n) {
+      margin: 0 10px; }
+    #music .m-pag:hover {
+      background: #a5a5a5;
+      border-color: #a5a5a5; }
+    #music .m-pag.active {
+      background: #727272; }
 
 /*# sourceMappingURL=style.css.map */

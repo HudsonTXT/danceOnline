@@ -1,8 +1,23 @@
 @import 'fonts';
+@mixin select() {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@mixin transition() {
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'Proxima Nova', Georgia, sans-serif;
+    overflow-x: hidden;
 }
 
 h2 {
@@ -12,7 +27,8 @@ h2 {
     margin: 0;
     margin-bottom: 34px;
 }
-h2 span{
+
+h2 span {
     font: 12px 'Proxima Nova Thin';
     vertical-align: middle;
     text-transform: lowercase;
@@ -37,15 +53,12 @@ h2 span{
     line-height: 60px;
     text-transform: none;
     cursor: pointer;
-    transition: all .5s ease-in-out;
+    @include transition();
     &:hover {
         background: lighten(#4c75a3, 5%);
         box-shadow: 0px 10px 13px 0px rgba(0, 0, 0, 0.35), inset 0px -3px 0px 0px rgba(0, 0, 0, 0.49);
     }
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    @include select();
 }
 
 #home {
@@ -60,6 +73,7 @@ h2 span{
         font: 45pt 'Proxima Nova Thin';
         letter-spacing: 0.12em;
         text-align: center;
+        @include select();
     }
     span {
         position: absolute;
@@ -131,6 +145,104 @@ h2 span{
     }
 }
 
-#music{
+#music {
     margin-top: 112px;
+    .m-block {
+        width: 242px;
+        height: 217px;
+        display: inline-block;
+        vertical-align: middle;
+        box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.35);
+        position: relative;
+        cursor: pointer;
+        @include transition();
+        background: #000;
+        @include select();
+        & img {
+            width: inherit;
+            height: inherit;
+            opacity: 1;
+        }
+        & .song-info {
+            opacity: 0;
+            position: absolute;
+            color: #fff;
+            text-transform: uppercase;
+            bottom: 10px;
+            left: 10px;
+            @include transition();
+            & span {
+                display: block;
+            }
+            animation: fadeOutUp .2s;
+        }
+        &:hover {
+            & img {
+                opacity: 0.8;
+            }
+            & .song-info {
+                opacity: 1;
+                animation: fadeInDown .2s;
+            }
+        }
+        & .song-info {
+            & .author {
+                font: 18px 'Proxima Nova Bold';
+            }
+            & .song {
+                font: 16px 'Proxima Nova';
+                margin-top: -5px;
+            }
+        }
+        &.active {
+            width: 374px;
+            height: 335px;
+            box-shadow: 2px 13px 25px 0px rgba(0, 0, 0, 0.35);
+            margin: 0 36px;
+            & img {
+                opacity: 0.9;
+            }
+            & .song-info {
+                opacity: 1;
+                animation: none;
+                & .author {
+                    font: 30px 'Proxima Nova Bold';
+                }
+                & .song {
+                    font: 24px 'Proxima Nova';
+                    margin-top: -7px;
+                }
+            }
+            &:hover {
+                & .song-info {
+                    animation: none;
+                }
+            }
+        }
+    }
+    .m-pagination {
+        margin-top: 34px;
+        width: 100%;
+        text-align: center;
+    }
+    .m-pag {
+        width: 14px;
+        height: 14px;
+        border-radius: 100%;
+        border: 1px solid #727272;
+        display: inline-block;
+        vertical-align: top;
+        cursor: pointer;
+        @include transition();
+        &:nth-child(2n) {
+            margin: 0 10px;
+        }
+        &:hover {
+            background: lighten(#727272, 20%);
+            border-color: lighten(#727272, 20%);
+        }
+        &.active {
+            background: #727272;
+        }
+    }
 }
