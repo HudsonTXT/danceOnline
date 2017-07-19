@@ -264,7 +264,8 @@ h2 span {
   #features .f-elem {
     display: inline-block;
     margin-left: 133px;
-    text-align: center; }
+    text-align: center;
+    vertical-align: top; }
   #features .f-slider {
     width: 485px;
     text-align: center;
