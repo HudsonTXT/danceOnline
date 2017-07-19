@@ -55,7 +55,7 @@ function check_login() {
                 $('span.username').text(user.first_name + ' ' + user.last_name);
                 $('span.coins').text(user.coins);
             })
-            location.href = 'https://hudsontxt.github.io/do-lk/';
+            location.href = 'lk/';
         } else {
             //Not lodinned
         }
